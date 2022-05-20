@@ -5,7 +5,7 @@ import { db } from "../config/firebase";
 import { doc, deleteDoc } from "firebase/firestore";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const taskDone = (props) => {
+const TaskDone = (props) => {
   const [doneSpinner, setDoneSpinner] = useState(false);
 
   const deleteIssue = async (id) => {
@@ -44,4 +44,4 @@ const taskDone = (props) => {
   );
 };
 
-export default taskDone;
+export default TaskDone;

@@ -11,7 +11,7 @@ import { db } from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const declare = (props) => {
+const Declare = (props) => {
   const [declareSpin, setdeclareSpin] = useState(false);
 
   const { register, handleSubmit } = useForm();
@@ -101,4 +101,4 @@ const declare = (props) => {
   );
 };
 
-export default declare;
+export default Declare;

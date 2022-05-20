@@ -18,7 +18,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-const tech = () => {
+const Tech = () => {
   const [user, setuser] = useState({});
   const [taches, settaches] = useState([]);
   const [machines, setmachines] = useState([]);
@@ -101,8 +101,8 @@ const tech = () => {
               {tachSpinner ? (
                 <CircularProgress />
               ) : (
-                taches.map((tach) => (
-                  <TableRow>
+                taches.map((tach, key) => (
+                  <TableRow key={key}>
                     <TableCell>{tach.content}</TableCell>
                     <TableCell>
                       <CheckIcon
@@ -146,4 +146,4 @@ const tech = () => {
   );
 };
 
-export default tech;
+export default Tech;

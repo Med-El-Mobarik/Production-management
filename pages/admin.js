@@ -20,7 +20,7 @@ import TableRow from "@mui/material/TableRow";
 import Add from "../components/taskAdd";
 import Del from "../components/delIssue";
 
-const admin = () => {
+const Admin = () => {
   const [user, setuser] = useState({});
   const [taches, settaches] = useState([]);
   const [tachSpinner, settachSpinner] = useState(false);
@@ -120,8 +120,8 @@ const admin = () => {
                   {tachSpinner ? (
                     <CircularProgress />
                   ) : (
-                    taches.map((tach) => (
-                      <TableRow>
+                    taches.map((tach, key) => (
+                      <TableRow key={key}>
                         <TableCell>{tach.content}</TableCell>
                         <TableCell>{tach.tech_name}</TableCell>
                         <TableCell>
@@ -182,8 +182,8 @@ const admin = () => {
                   {tachSpinner ? (
                     <CircularProgress />
                   ) : (
-                    issues.map((tach) => (
-                      <TableRow>
+                    issues.map((tach, key) => (
+                      <TableRow key={key}>
                         <TableCell>{tach.description}</TableCell>
                         <TableCell>{tach.tech}</TableCell>
                         <TableCell>{tach.machine}</TableCell>
@@ -229,8 +229,8 @@ const admin = () => {
               ) : (
                 users
                   .filter((user) => user.name != "erratby")
-                  .map((tach) => (
-                    <TableRow>
+                  .map((tach, key) => (
+                    <TableRow key={key}>
                       <TableCell>{tach.id}</TableCell>
                       <TableCell>{tach.name}</TableCell>
                       <TableCell>{tach.machine}</TableCell>
@@ -261,4 +261,4 @@ const admin = () => {
   );
 };
 
-export default admin;
+export default Admin;

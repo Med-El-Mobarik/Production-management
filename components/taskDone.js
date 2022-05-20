@@ -5,7 +5,7 @@ import { db } from "../config/firebase";
 import { updateDoc, doc } from "firebase/firestore";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const taskDone = (props) => {
+const TaskDone = (props) => {
   const [doneSpinner, setDoneSpinner] = useState(false);
 
   const doneTach = async (id) => {
@@ -46,4 +46,4 @@ const taskDone = (props) => {
   );
 };
 
-export default taskDone;
+export default TaskDone;

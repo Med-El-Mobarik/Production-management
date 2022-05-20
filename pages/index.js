@@ -5,7 +5,7 @@ import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useRouter } from "next/router";
 
-const index = () => {
+const Index = () => {
   const [circular, setcircular] = useState(false);
 
   const router = useRouter();
@@ -120,4 +120,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

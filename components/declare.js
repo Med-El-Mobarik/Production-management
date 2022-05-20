@@ -11,7 +11,7 @@ import { db } from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const declare = (props) => {
+const Declare = (props) => {
   const [declareSpin, setdeclareSpin] = useState(false);
 
   const { register, handleSubmit } = useForm();
@@ -50,8 +50,8 @@ const declare = (props) => {
               label="Machine"
               {...register("machine")}
             >
-              {props.machines.map((machine) => (
-                <MenuItem value={machine.name}>{machine.name}</MenuItem>
+              {props.machines.map((machine, key) => (
+                <MenuItem key={key} value={machine.name}>{machine.name}</MenuItem>
               ))}
             </Select>
           </FormControl>
@@ -116,4 +116,4 @@ const declare = (props) => {
   );
 };
 
-export default declare;
+export default Declare;
